@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "author" content = "Veronica Marcella Angela Simalngo 2172042">
+    <title>Soal 1</title>
+    <style>
+        h1 {
+            font-size: xx-large;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 300px;
+            
+        }
+
+        #tombol {
+            margin: auto;
+            text-align: center;
+            margin-top: 200px;
+        }
+        
+    </style>
+</head>
+<body style="background-color: rgb(233, 150, 122);">
+
+    <h1 id=text></h1>
+    <div id=tombol><input type="number" min="1" max="10" id=speed onclick="kata()"></div>
+
+    <script>
+    
+    function kata() {
+        let kecepatan = document.querySelector("#speed").value;
+        for (let i=1; i<=20; i++)
+        {
+        let myTimeout = setTimeout(function(){
+            
+            let text="We Love Programing!"
+            let result = text.slice(0, i);
+            document.getElementById("text").innerHTML = result
+            }, 500*i/kecepatan );
+        }
+        }
+   
+   </script>
+</body>
+</html>
